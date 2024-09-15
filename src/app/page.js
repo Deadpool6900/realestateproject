@@ -1,101 +1,92 @@
+'use client'
+import CardHolder from "@/components/CardHolder";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Qualities from "@/components/Qualities";
+import PropertySearch from "@/components/Search";
 import Image from "next/image";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <Navbar />
+      <main className="container mx-auto flex flex-col md:flex-row items-center py-16 px-6 bg-[#fff7f0] text-black">
+        <div className="md:w-1/2">
+          <h1 className="text-4xl font-bold text-center md:text-left mb-4">Find a perfect property</h1>
+          <h2 className="text-4xl font-bold text-center md:text-left mb-4">Where you’ll love to live</h2>
+          <p className="text-gray-600 text-center md:text-left mb-8">We helps businesses customize, automate and scale up their ad production and delivery.</p>
+          <PropertySearch/>
+        </div>
+        <div className="md:w-1/2 mt-8 md:mt-0 md:ml-8">
+          <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="A beautiful house with a well-maintained garden" className="w-full" />
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <Qualities/>
+      <CardHolder/>
+
+      <div className="container mx-auto p-8 bg-white px-20">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-16">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <h1 className="text-4xl font-bold mb-4">Simple & easy way to find your dream Appointment</h1>
+            <p className="text-gray-600 mb-6">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed.
+            </p>
+            <button className="bg-black text-white py-2 px-4 rounded">Get Started</button>
+          </div>
+          <div className="md:w-1/2 grid grid-cols-2 gap-4">
+            <img src="https://placehold.co/300x200" alt="A beautiful house" className="rounded-lg" />
+            <img src="https://placehold.co/300x200" alt="People signing documents" className="rounded-lg" />
+            <img src="https://placehold.co/300x200" alt="Handing over keys" className="rounded-lg" />
+            <img src="https://placehold.co/300x200" alt="A modern kitchen" className="rounded-lg" />
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <img src="https://placehold.co/600x400" alt="A yellow house with a garden" className="rounded-lg" />
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold mb-4">Best rated host on popular rental sites</h2>
+            <p className="text-gray-600">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. In a free hour, when our power of choice is untrammelled.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="p-8">
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-3xl font-bold">News & Consult</h1>
+          <a href="#" className="text-orange-500">Explore All <i className="fas fa-arrow-right"></i></a>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <img src="https://placehold.co/600x400" alt="Tall building with unique architecture" className="rounded-lg mb-4" />
+            <h2 className="text-xl font-bold mb-2">9 Easy-to-Ambitious DIY Projects to Improve Your Home</h2>
+            <a href="#" className="text-orange-500">Read the Article <i className="fas fa-arrow-right"></i></a>
+          </div>
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <img src="https://placehold.co/600x400" alt="Modern living room with large windows" className="rounded-lg mb-4" />
+            <h2 className="text-xl font-bold mb-2">Serie Shophouse Launch In July, Opportunity For Investors</h2>
+            <a href="#" className="text-orange-500">Read the Article <i className="fas fa-arrow-right"></i></a>
+          </div>
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <img src="https://placehold.co/600x400" alt="Suburban house with a well-maintained lawn" className="rounded-lg mb-4" />
+            <h2 className="text-xl font-bold mb-2">Looking for a New Place? Use This Time to Create Your Wishlist</h2>
+            <a href="#" className="text-orange-500">Read the Article <i className="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div className="bg-gray-200 text-black p-8 rounded-lg text-center">
+          <h2 className="text-2xl font-bold mb-4">For Recent Update, News.</h2>
+          <p className="mb-4">We helps businesses customize, automate and scale up their ad production and delivery.</p>
+          <div className="flex justify-center">
+            <input type="email" placeholder="Enter your Email" className="p-2 rounded-l-lg border border-gray-400" />
+            <button className="bg-black text-white p-2 rounded-r-lg">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <Footer/>
+    </>
   );
 }
