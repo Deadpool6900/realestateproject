@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 const PropertyCard = ({ image, address, bed, bath, sqft, type, price }) => (
-    <div className="border rounded-lg overflow-hidden shadow-lg ">
-        <img src={image} alt="House" className="w-full h-48 object-cover" />
+    <div className="border rounded-lg overflow-hidden shadow-lg text-black ">
+        <Image src={image} alt="House" width={400} height={200} className="w-full h-48 object-cover" />
         <div className="p-4">
             <div className="flex items-center mb-2">
                 <i className="fas fa-map-marker-alt mr-2"></i>
@@ -26,4 +28,4 @@ const PropertyCard = ({ image, address, bed, bath, sqft, type, price }) => (
     </div>
 );
 
-export default PropertyCard ;
+export default PropertyCard;

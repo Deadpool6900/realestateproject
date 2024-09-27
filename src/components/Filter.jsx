@@ -3,7 +3,7 @@ import React from 'react'
 const Filter = () => {
     return (
         <div>
-            <div className="p-4 md:p-8 bg-white">
+            <div className="p-4 md:p-8 bg-white text-black">
                 <h1 className="text-2xl md:text-3xl font-bold mb-4">Find Property</h1>
                 <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
                     <div className="flex items-center border rounded-lg p-2 bg-white w-full md:w-auto">

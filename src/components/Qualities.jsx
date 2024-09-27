@@ -1,3 +1,4 @@
+import { LucideDollarSign, LucideEye, LucideHome, LucidePanelsTopLeft, LucideSearch, LucideSmile } from 'lucide-react'
 import React from 'react'
 
 const Qualities = () => {
@@ -12,42 +13,43 @@ const Qualities = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-4 w-full md:w-1/2 ">
                         <div className="bg-orange-100 p-4 rounded-lg shadow-md flex items-center h-40">
-                            <i className="fas fa-search-location text-orange-500 text-2xl mr-4"></i>
+                            <LucideSearch />
                             <span>Search your location</span>
                         </div>
                         <div className="bg-orange-100 p-4 rounded-lg shadow-md flex items-center">
-                            <i className="fas fa-eye text-orange-500 text-2xl mr-4"></i>
+                            <LucideEye />
                             <span>Visit Appointment</span>
                         </div>
                         <div className="bg-orange-100 p-4 rounded-lg shadow-md flex items-center">
-                            <i className="fas fa-home text-orange-500 text-2xl mr-4"></i>
+                            <LucideHome />
                             <span>Get your dream house</span>
                         </div>
                         <div className="bg-orange-100 p-4 rounded-lg shadow-md flex items-center">
-                            <i className="fas fa-smile text-orange-500 text-2xl mr-4"></i>
+                            <LucideSmile />
                             <span>Enjoy your Appointment</span>
                         </div>
                     </div>
                 </div>
-                <div className="bg-orange-50 w-full py-10 mt-10">
+                <div className="bg-orange-50 w-full py-10 mt-10 text-black">
                     <div className="flex flex-col md:flex-row justify-around items-center">
                         <div className="text-center mb-6 md:mb-0">
                             <div className="bg-white p-4 rounded-full shadow-md inline-block mb-2">
-                                <i className="fas fa-dollar-sign text-orange-500 text-2xl"></i>
+                                <LucideDollarSign/>
                             </div>
                             <h3 className="text-2xl font-bold text-black">$15.4M</h3>
                             <p className="text-black">Owned from Properties transactions</p>
                         </div>
                         <div className="text-center mb-6 md:mb-0">
                             <div className="bg-white p-4 rounded-full shadow-md inline-block mb-2">
-                                <i className="fas fa-dollar-sign text-orange-500 text-2xl"></i>
+                                <LucideHome />
                             </div>
                             <h3 className="text-2xl font-bold text-black">25K+</h3>
                             <p className="text-black">Properties for Buy & sell Successfully</p>
                         </div>
                         <div className="text-center mb-6 md:mb-0">
                             <div className="bg-white p-4 rounded-full shadow-md inline-block mb-2">
-                                <i className="fas fa-dollar-sign text-orange-500 text-2xl"></i>
+                                <LucideSmile />
+
                             </div>
                             <h3 className="text-2xl font-bold text-black">$15.4M</h3>
                             <p className="text-black">Owned from Properties transactions</p>
@@ -55,6 +57,7 @@ const Qualities = () => {
                         <div className="text-center">
                             <div className="bg-white p-4 rounded-full shadow-md inline-block mb-2">
                                 <i className="fas fa-smile text-orange-500 text-2xl"></i>
+                                <LucidePanelsTopLeft/>
                             </div>
                             <h3 className="text-2xl font-bold text-black">600+</h3>
                             <p className="text-black">Reagular Clients</p>
